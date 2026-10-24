@@ -14,8 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const state = {
     menuIndex: 0,
     essayIndex: 0,
-    soundEnabled: localStorage.getItem('bios_sound_enabled') !== 'false',
-    crtEnabled: localStorage.getItem('bios_crt_enabled') !== 'false'
+    soundEnabled: localStorage.getItem('bios_sound_enabled') !== 'false'
   };
 
   // --------------------------------------------------------------------------
@@ -24,8 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const biosClock = document.getElementById('biosClock');
   const soundStatus = document.getElementById('soundStatus');
   const soundToggleBtn = document.getElementById('soundToggleBtn');
-  const crtStatus = document.getElementById('crtStatus');
-  const crtToggleBtn = document.getElementById('crtToggleBtn');
   const backBtn = document.getElementById('backBtn');
 
   // Main menu page elements
@@ -97,25 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
   updateBiosClock();
 
   // --------------------------------------------------------------------------
-  // CRT Mode & Sound Initial Sync
+  // Sound Controls & Initial Sync
   // --------------------------------------------------------------------------
-  function applyCrtState() {
-    if (state.crtEnabled) {
-      document.body.classList.add('crt-enabled');
-      if (crtStatus) crtStatus.textContent = 'ON';
-    } else {
-      document.body.classList.remove('crt-enabled');
-      if (crtStatus) crtStatus.textContent = 'OFF';
-    }
-  }
-
-  function toggleCrt() {
-    state.crtEnabled = !state.crtEnabled;
-    localStorage.setItem('bios_crt_enabled', state.crtEnabled);
-    applyCrtState();
-    soundNav();
-  }
-
   function applySoundState() {
     if (soundStatus) {
       soundStatus.textContent = state.soundEnabled ? 'ON' : 'OFF';
@@ -132,11 +112,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  applyCrtState();
   applySoundState();
 
   if (soundToggleBtn) soundToggleBtn.addEventListener('click', toggleSound);
-  if (crtToggleBtn) crtToggleBtn.addEventListener('click', toggleCrt);
 
   // --------------------------------------------------------------------------
   // Main Menu Navigation (index.html)
@@ -256,12 +234,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Sound toggle: 'M' or 'm'
     if (e.key === 'm' || e.key === 'M') {
       toggleSound();
-      return;
-    }
-
-    // CRT toggle: 'C' or 'c'
-    if (e.key === 'c' || e.key === 'C') {
-      toggleCrt();
       return;
     }
 

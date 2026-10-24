@@ -456,6 +456,19 @@ html, body {
   margin-top: 14px;
 }
 
+.essay-article-body p {
+  margin-bottom: 18px;
+}
+
+.essay-section-title {
+  color: var(--bios-yellow);
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 26px;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
 /* --------------------------------------------------------------------------
    CONTACTO SECTION: COMMUNICATION CHANNELS
    -------------------------------------------------------------------------- */
@@ -489,6 +502,18 @@ html, body {
   font-weight: bold;
   margin-bottom: 12px;
   letter-spacing: 1px;
+}
+
+.bios-link {
+  color: var(--bios-cyan);
+  text-decoration: underline;
+  transition: all 0.08s ease;
+}
+
+.bios-link:hover {
+  background-color: var(--bios-white);
+  color: var(--bios-blue);
+  text-decoration: none;
 }
 
 .channel-val .bios-link {

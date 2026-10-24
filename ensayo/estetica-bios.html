@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La estética de la BIOS: Nostalgia y usabilidad pura | Felipe Maturana</title>
+  <meta name="description" content="Ensayo de Felipe Maturana sobre la estética de la BIOS, nostalgia y usabilidad pura.">
+  <meta name="author" content="Felipe Maturana">
+
+  <!-- Retro Monospace Fonts: VT323 & Share Tech Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="crt-enabled">
+  <!-- Subtle CRT Scanlines & Screen Flicker Overlay -->
+  <div class="crt-overlay" aria-hidden="true"></div>
+
+  <!-- BIOS Frame / Monitor Chassis -->
+  <div class="bios-wrapper">
+    <main class="bios-screen" id="biosScreen" role="region" aria-label="BIOS Setup Utility">
+
+      <!-- Header Section -->
+      <header class="bios-header">
+        <div class="bios-header-top">
+          <span class="bios-datetime" id="biosClock">FECHA: 2026-10-23  HORA: 22:20:00</span>
+        </div>
+        <div class="bios-title-banner">
+          <h1 class="bios-title" id="pageTitle">=== FELIPE MATURANA ===</h1>
+        </div>
+      </header>
+
+      <!-- Main Content Container: Individual Essay -->
+      <section class="bios-content-area" id="contentArea">
+        <div class="bios-view active" id="view-single-essay">
+          <div class="subview-header">
+            <span class="subview-title">=== ENSAYOS ===</span>
+            <a href="../ensayos.html" class="bios-back-btn" id="backBtn">[ESC] VOLVER A ENSAYOS</a>
+          </div>
+          <div class="subview-body scrollable">
+            <article class="essay-article">
+              <header class="essay-article-header">
+                <h2 class="essay-article-title">La estética de la BIOS: Nostalgia y usabilidad pura</h2>
+                <div class="essay-article-meta">
+                  <div class="meta-row"><span class="meta-label">FECHA DE PUBLICACIÓN:</span> <span class="meta-val">2025-11-20</span></div>
+                  <div class="meta-row"><span class="meta-label">CATEGORÍA:</span> <span class="meta-val">Diseño</span></div>
+                </div>
+              </header>
+
+              <div class="bios-separator">════════════════════════════════════════════════════════════════</div>
+
+              <div class="essay-article-body">
+                <p>
+                  Las pantallas azules de las BIOS clásicas (Award, Phoenix, AMI) transmitían una sensación inequívoca: 
+                  el usuario tenía el control total y directo de la máquina. La tipografía monospace, las paletas de 16 colores 
+                  y la navegación fluida por teclado priorizaban la claridad sobre la distracción. En una web contemporánea 
+                  repleta de animaciones invasivas y consumo desmedido de recursos, rescatar este lenguaje visual nos devuelve 
+                  la inmediatez, la sobriedad y la eficiencia que nunca debieron perderse.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer / Keybindings Navigation Bar -->
+      <footer class="bios-footer">
+        <div class="key-help-grid">
+          <div class="key-item"><span class="key">[ESC]</span> Volver a Ensayos</div>
+          <div class="key-item interactive" id="soundToggleBtn"><span class="key">[M]</span> Sonido: <span id="soundStatus">ON</span></div>
+          <div class="key-item interactive" id="crtToggleBtn"><span class="key">[C]</span> Modo CRT: <span id="crtStatus">ON</span></div>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>=== FELIPE MATURANA === | Sobre Mí</title>
+  <meta name="description" content="Perfil y biografía de Felipe Maturana en estilo retro BIOS.">
+  <meta name="author" content="Felipe Maturana">
+
+  <!-- Retro Monospace Fonts: VT323 & Share Tech Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="crt-enabled">
+  <!-- Subtle CRT Scanlines & Screen Flicker Overlay -->
+  <div class="crt-overlay" aria-hidden="true"></div>
+
+  <!-- BIOS Frame / Monitor Chassis -->
+  <div class="bios-wrapper">
+    <main class="bios-screen" id="biosScreen" role="region" aria-label="BIOS Setup Utility">
+
+      <!-- Header Section -->
+      <header class="bios-header">
+        <div class="bios-header-top">
+          <span class="bios-datetime" id="biosClock">FECHA: 2026-10-23  HORA: 22:20:00</span>
+        </div>
+        <div class="bios-title-banner">
+          <h1 class="bios-title" id="pageTitle">=== FELIPE MATURANA ===</h1>
+        </div>
+      </header>
+
+      <!-- Main Content Container: Sobre Mí -->
+      <section class="bios-content-area" id="contentArea">
+        <div class="bios-view active" id="view-sobre-mi">
+          <div class="subview-header">
+            <span class="subview-title">=== CONFIGURACIÓN DE USUARIO: SOBRE MÍ ===</span>
+            <a href="index.html" class="bios-back-btn" id="backBtn">[ESC] VOLVER AL MENÚ</a>
+          </div>
+          <div class="subview-body scrollable">
+            <div class="bios-field-group">
+              <div class="bios-row">
+                <span class="field-label">Nombre Completo:</span>
+                <span class="field-value highlight">Felipe Maturana</span>
+              </div>
+              <div class="bios-row">
+                <span class="field-label">Rol Principal:</span>
+                <span class="field-value">Desarrollador de Software & Escritor</span>
+              </div>
+              <div class="bios-row">
+                <span class="field-label">Especialidad:</span>
+                <span class="field-value">Arquitectura Web, Filosofía Digital y Sistemas</span>
+              </div>
+              <div class="bios-row">
+                <span class="field-label">Filosofía:</span>
+                <span class="field-value">"Simplicidad, rendimiento y artesanía digital"</span>
+              </div>
+            </div>
+
+            <div class="bios-separator">════════════════════════════════════════════════════════════════</div>
+
+            <div class="bios-bio-text">
+              <p class="section-title">► BIOGRAFÍA Y PRESENTACIÓN</p>
+              <p>
+                Bienvenido a mi espacio personal. Soy Felipe Maturana, un apasionado de la informática, 
+                la computación reflexiva y la belleza de las interfaces limpias y directas. 
+                Este sitio está construido enteramente en HTML, CSS y JavaScript vainilla, inspirado en 
+                la estética atemporal de las BIOS clásicas que definieron la era de oro del PC.
+              </p>
+              <p>
+                Aquí publico reflexiones, ensayos sobre tecnología, sociedad y diseño de software, 
+                además de mis proyectos y canales de comunicación.
+              </p>
+            </div>
+
+            <div class="bios-separator">════════════════════════════════════════════════════════════════</div>
+
+            <div class="bios-specs-grid">
+              <div class="spec-col">
+                <span class="spec-title">[ ÁREAS DE INTERÉS ]</span>
+                <ul>
+                  <li>• Desarrollo Frontend & Backend Vainilla</li>
+                  <li>• Arquitectura de Software Limpia</li>
+                  <li>• Computación Retro & Preservación Digital</li>
+                  <li>• Filosofía de la Tecnología</li>
+                </ul>
+              </div>
+              <div class="spec-col">
+                <span class="spec-title">[ STACK Y HERRAMIENTAS ]</span>
+                <ul>
+                  <li>• Lenguajes: JavaScript, TypeScript, Python</li>
+                  <li>• Web: HTML5, CSS3, DOM APIs, Web Audio</li>
+                  <li>• Entorno: Linux, Terminal, Git</li>
+                  <li>• Metodología: Minimalismo pragmático</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer / Keybindings Navigation Bar -->
+      <footer class="bios-footer">
+        <div class="key-help-grid">
+          <div class="key-item"><span class="key">[ESC]</span> Volver al Menú Principal</div>
+          <div class="key-item interactive" id="soundToggleBtn"><span class="key">[M]</span> Sonido: <span id="soundStatus">ON</span></div>
+          <div class="key-item interactive" id="crtToggleBtn"><span class="key">[C]</span> Modo CRT: <span id="crtStatus">ON</span></div>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
